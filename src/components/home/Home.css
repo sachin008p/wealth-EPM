@@ -118,6 +118,7 @@ body {
   transform-style: preserve-3d;
   text-align: center;
   will-change: transform;
+   --lineReveal: 0;
 }
 
 /* Each word line — GSAP staggers these in */
@@ -204,9 +205,24 @@ body {
   display: block;
   width: clamp(80px, 20vw, 260px);
   height: 1px;
-  margin: 8px auto 0;
-  background: linear-gradient(90deg, transparent, #c9a66b, #f0d48a, #c9a66b, transparent);
-  opacity: 0.7;
+  margin: 10px auto 0;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #c9a66b,
+    #f0d48a,
+    #c9a66b,
+    transparent
+  );
+
+  opacity: var(--lineReveal);
+  transform: scaleX(var(--lineReveal));
+  transform-origin: center;
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
 }
 
 /* =========================

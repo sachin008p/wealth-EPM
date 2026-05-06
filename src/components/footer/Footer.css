@@ -352,7 +352,7 @@
    COLUMNS
 ========================================= */
 .luxury-footer-column {
-  margin-top: 80px;
+  margin-top:0px;
 }
 
 .luxury-footer-column,
@@ -953,3 +953,48 @@
 }
 
 
+
+
+
+
+@media (max-width: 768px) {
+  .luxury-footer,
+  .epm-footer {
+    overflow: visible !important;
+    padding-bottom: 90px !important;
+  }
+
+  .luxury-footer-grid,
+  .epm-footer-content,
+  .epm-footer-bottom,
+  .epm-footer-links {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    width: 100% !important;
+  }
+
+  .luxury-footer-column,
+  .epm-footer-column {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    margin-top: 0 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .luxury-footer-column a,
+  .epm-footer-links a {
+    display: block !important;
+    width: 100% !important;
+    margin-bottom: 12px !important;
+  }
+
+  .epm-whatsapp-float {
+    left: auto !important;
+    right: 14px !important;
+    bottom: 18px !important;
+    z-index: 99999 !important;
+  }
+}

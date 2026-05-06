@@ -720,40 +720,54 @@ const Home = () => {
   };
 
   const handleVideoEnd = () => {
-    setVideoEnded(true);
-    const tl = gsap.timeline({ defaults: { ease: "power4.out" } });
-    tl.to(revealOverlayRef.current, {
+  setVideoEnded(true);
+
+  const tl = gsap.timeline({
+    defaults: {
+      ease: "power3.out",
+    },
+  });
+
+  /* overlay visible */
+  tl.to(revealOverlayRef.current, {
+    opacity: 1,
+    duration: 0.6,
+  });
+
+  /* FIRST → golden line */
+  tl.to(
+    ".epm-hero-3d-text",
+    {
+      "--lineReveal": 1,
+      duration: 0.9,
+    },
+    "-=0.2"
+  );
+
+  /* THEN → content */
+  tl.fromTo(
+    ".epm-hero-text-line",
+    {
+      opacity: 0,
+      y: 80,
+      rotateX: -70,
+      transformOrigin: "bottom",
+    },
+    {
       opacity: 1,
-      duration: 1.4,
-      ease: "power2.out",
-    })
-      .fromTo(
-        ".epm-hero-text-line",
-        {
-          opacity: 0,
-          y: 80,
-          rotateX: -55,
-          filter: "blur(12px)",
-          transformOrigin: "50% 100%",
-        },
-        {
-          opacity: 1,
-          y: 0,
-          rotateX: 0,
-          filter: "blur(0px)",
-          duration: 1.1,
-          stagger: 0.22,
-        },
-        "-=0.8",
-      )
-      .call(
-        () => {
-          setShowTyped(true);
-        },
-        null,
-        "+=0.5",
-      );
-  };
+      y: 0,
+      rotateX: 0,
+      stagger: 0.18,
+      duration: 1.2,
+    },
+    "-=0.2"
+  );
+
+  /* LAST → typed line */
+  tl.call(() => {
+    setShowTyped(true);
+  });
+};
 
   useEffect(() => {
     if (!showTyped) return;
