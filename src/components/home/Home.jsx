@@ -42,9 +42,9 @@ import heroVaultImg from "../../assets/home/epm-vault-hero.webp";
 gsap.registerPlugin(ScrollTrigger);
 
 ScrollTrigger.config({
-  ignoreMobileResize: true,
+  ignoreMobileResize:true,
+  autoRefreshEvents:"visibilitychange,DOMContentLoaded,load"
 });
-
 const features = [
   {
     id: 1,
