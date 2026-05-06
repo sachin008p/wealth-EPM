@@ -6113,9 +6113,6 @@ video {
     --orbit-size: 360px;
   }
 
-  .epm-orbit-visual-wrap{
-    display:none;
-  }
   .epm-orbit-center {
     width: 78%;
     border-width: 6px;
@@ -7004,10 +7001,3 @@ body {
 
 
 
-@media(max-width:768px){
-
-  .epm-orbit-rotator{
-    animation:none;
-  }
-
-}
