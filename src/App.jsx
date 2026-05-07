@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import ScrollToTop from "./components/ScrollToTop";
+import { LogIn } from "lucide-react";
 
 const Home = lazy(() => import("./components/home/Home"));
 const Contact = lazy(() => import("./components/contact/Contact"));
@@ -13,7 +14,7 @@ const PortfolioConsultant = lazy(() => import("./components/solutions/PortfolioC
 const WealthManagement = lazy(() => import("./components/solutions/WealthManagement"));
 const SeminarWebinar = lazy(() => import("./components/financial/SeminarWebinar"));
 const EntrepreneurialInitiative = lazy(() => import("./components/entrepreneurial/EntrepreneurialInitiative"));
-
+const LoginPage = lazy(() => import("./components/login/LoginPage"));
 const PageLoader = () => (
   <div className="route-loader" aria-label="Loading page">
     <span></span>
@@ -37,6 +38,7 @@ const App = () => {
           <Route path="/solutions/wealth-management" element={<WealthManagement />} />
           <Route path="/financialliteracy/seminar-webinar" element={<SeminarWebinar />} />
           <Route path="/entrepreneurial-initiative" element={<EntrepreneurialInitiative />} />
+          <Route path="/login" element={<LoginPage />} />
         </Routes>
       </Suspense>
 

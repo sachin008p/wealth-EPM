@@ -998,3 +998,15 @@
     z-index: 99999 !important;
   }
 }
+
+
+
+
+
+/* LOGIN PAGE वर footer चे white circles hide */
+.epm-login-page ~ .luxury-footer::before,
+.epm-login-page ~ .luxury-footer::after,
+.epm-login-page ~ .epm-footer::before,
+.epm-login-page ~ .epm-footer::after {
+  display: none !important;
+}
