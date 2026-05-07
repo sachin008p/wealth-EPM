@@ -7430,3 +7430,128 @@ body {
     font-size: 0.82rem;
   }
 }
+
+
+/* MOBILE WEALTH TEXT CUT FIX */
+
+@media (max-width: 768px) {
+
+  .epm-hero-3d-text{
+    padding-top: 34px !important;
+    padding-bottom: 26px !important;
+
+    overflow: visible !important;
+  }
+
+  .epm-hero-heading-alt{
+    gap: 10px !important;
+
+    overflow: visible !important;
+  }
+
+  .epm-line-wealth{
+    font-size: clamp(3rem, 18vw, 5.8rem) !important;
+
+    line-height: 1.08 !important;
+
+    padding-top: 10px !important;
+    padding-bottom: 12px !important;
+
+    overflow: visible !important;
+  }
+
+  .epm-line-excellence{
+    line-height: 1.08 !important;
+  }
+
+  .epm-hero-video-wrap{
+    overflow: hidden !important;
+  }
+}
+
+@media (max-width: 480px){
+
+  .epm-line-wealth{
+    font-size: clamp(3.2rem, 19vw, 5.4rem) !important;
+
+    line-height: 1.12 !important;
+
+    letter-spacing: -1px !important;
+  }
+
+  .epm-hero-3d-text{
+    padding-top: 38px !important;
+  }
+}
+
+
+
+
+/* FINAL MOBILE WEALTH FIX */
+
+@media (max-width: 768px) {
+
+  .epm-hero-3d-scene{
+    padding: 70px 14px 24px !important;
+  }
+
+  .epm-hero-3d-text{
+    gap: 6px !important;
+    padding: 18px 12px !important;
+
+    overflow: visible !important;
+  }
+
+  .epm-line-because{
+    font-size: 0.72rem !important;
+    letter-spacing: 0.22em !important;
+  }
+
+  .epm-line-wealth{
+    font-size: clamp(2.4rem, 13vw, 4.2rem) !important;
+
+    line-height: 0.95 !important;
+
+    letter-spacing: -0.5px !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    transform: none !important;
+  }
+
+  .epm-line-deserves{
+    font-size: clamp(0.9rem, 4vw, 1.8rem) !important;
+
+    letter-spacing: 0.16em !important;
+  }
+
+  .epm-line-excellence{
+    font-size: clamp(1.2rem, 6vw, 2.5rem) !important;
+
+    line-height: 1 !important;
+
+    letter-spacing: 0.03em !important;
+  }
+
+  .epm-hero-typed-text{
+    font-size: 0.92rem !important;
+  }
+}
+
+@media (max-width: 480px){
+
+  .epm-line-wealth{
+    font-size: clamp(2.2rem, 12vw, 3.8rem) !important;
+
+    line-height: 0.92 !important;
+  }
+
+  .epm-line-excellence{
+    font-size: clamp(1rem, 5.5vw, 2rem) !important;
+  }
+
+  .epm-hero-typed-row{
+    margin-top: 8px !important;
+  }
+}
