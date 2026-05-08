@@ -1111,7 +1111,7 @@ body {
 .epm-crystal-three {
   width: 280px;
   height: 280px;
-  bottom: 8%;
+  bottom: 9%;
   left: 40%;
   background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 60%, transparent 80%);
   animation: epmCrystalFloatThree 11s ease-in-out infinite;
