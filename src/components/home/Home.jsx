@@ -100,28 +100,28 @@ const articles = [
     id: 3,
     type: "ARTICLE · CIO'S DESK",
     meta: "",
-    title: "Where does gold go from here?",
-    date: "20 January 2026",
+    title: "Silver: Protecting Gains, Avoiding FOMO",
+    date: "05 March 2026",
     image:
-      "https://images.unsplash.com/photo-1610375461246-83df859d849d?w=400&q=75&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&q=75&auto=format&fit=crop",
   },
   {
     id: 4,
     type: "ARTICLE · CIO'S DESK",
     meta: "",
-    title: "The GIFT City Advantage",
-    date: "20 January 2026",
+    title: "Where does gold go from here?",
+    date: "02 April 2026",
     image:
-      "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=400&q=75&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1610375461246-83df859d849d?w=400&q=75&auto=format&fit=crop",
   },
   {
     id: 5,
     type: "ARTICLE · CIO'S DESK",
     meta: "",
-    title: "Silver: Protecting Gains, Avoiding FOMO",
-    date: "20 January 2026",
+    title: "The GIFT City Advantage",
+    date: "05 May 2026",
     image:
-      "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&q=75&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=400&q=75&auto=format&fit=crop",
   },
 ];
 
@@ -392,7 +392,6 @@ const Home = () => {
   const revealOverlayRef = useRef(null);
   const heroTextRef = useRef(null);
   const socialIconsRef = useRef(null);
-  const rafRef = useRef(null);
 
   const [videoEnded, setVideoEnded] = useState(false);
   const [showTyped, setShowTyped] = useState(false);
@@ -482,50 +481,6 @@ const Home = () => {
     return () => {
       window.removeEventListener("scroll", handleSocialVisibility);
       window.removeEventListener("resize", handleSocialVisibility);
-    };
-  }, []);
-
-  /* ── Hero container 3D mouse-move tilt (desktop only) ── */
-  useEffect(() => {
-    const container = videoContainerRef.current;
-    if (!container) return;
-
-    const onMove = (e) => {
-      if (window.innerWidth <= 768) return;
-      if (rafRef.current) cancelAnimationFrame(rafRef.current);
-      rafRef.current = requestAnimationFrame(() => {
-        const rect = container.getBoundingClientRect();
-        const cx = rect.left + rect.width / 2;
-        const cy = rect.top + rect.height / 2;
-        const dx = (e.clientX - cx) / (rect.width / 2);
-        const dy = (e.clientY - cy) / (rect.height / 2);
-        const rotX = dy * -4;
-        const rotY = dx * 5;
-        container.style.transform = `perspective(1200px) rotateX(${rotX}deg) rotateY(${rotY}deg) scale(1.01)`;
-      });
-    };
-
-    const onLeave = () => {
-      if (rafRef.current) cancelAnimationFrame(rafRef.current);
-      container.style.transition = "transform 0.6s cubic-bezier(0.23,1,0.32,1)";
-      container.style.transform =
-        "perspective(1200px) rotateX(0deg) rotateY(0deg) scale(1)";
-      setTimeout(() => {
-        if (container) container.style.transition = "";
-      }, 620);
-    };
-
-    const section = heroWrapRef.current;
-    if (section) {
-      section.addEventListener("mousemove", onMove, { passive: true });
-      section.addEventListener("mouseleave", onLeave);
-    }
-    return () => {
-      if (section) {
-        section.removeEventListener("mousemove", onMove);
-        section.removeEventListener("mouseleave", onLeave);
-      }
-      if (rafRef.current) cancelAnimationFrame(rafRef.current);
     };
   }, []);
 
