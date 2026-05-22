@@ -1916,13 +1916,8 @@ body {
 }
 
 .solutions-label {
-  font-family: "Inter", sans-serif;
-  font-size: 12px;
-  letter-spacing: 4px;
-  font-weight: 500;
-  color: #9c6f45;
-  display: inline-block;
-  margin-bottom: 18px;
+  /* removed: label unused after homepage update */
+  display: none;
 }
 
 .solutions-right p {
