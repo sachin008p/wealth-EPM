@@ -1225,7 +1225,7 @@ const Home = () => {
         <section className="solutions-section epm-reveal-section epm-animate epm-overlap-panel">
           <div className="solutions-container">
             <div className="solutions-left">
-              {/* <span className="solutions-label">SOLUTIONS</span> */}
+              <span className="solutions-label">OUR CRAFT</span>
               <h2>Wealth Is More Than Just Money...</h2>
               <Link to="/contact" className="solutions-link">
                 START THE CONVERSATION <span>→</span>
@@ -1304,7 +1304,7 @@ const Home = () => {
           <div className="vault-container">
             <div className="vault-top-grid">
               <div className="vault-left-panel">
-                {/* <span className="vault-label">VAULT</span> */}
+                <span className="vault-label">VAULT DESIGN</span>
 
                 <h2 className="vault-heading">
                   Your access to
