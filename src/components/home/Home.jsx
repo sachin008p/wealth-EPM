@@ -127,92 +127,84 @@ const articles = [
 
 const awardsData = [
   {
-    year: "2016",
-    title: "Moneycontrol Emerging Wealth Award",
-    brand: "MONEYCONTROL",
-    badge: "🏅",
-    subtitle:
-      "Our journey began with a strong advisory foundation built on trust, consistency, and personalized wealth planning.",
-  },
-  {
     year: "2017",
-    title: "Business Today Advisory Excellence",
-    brand: "BUSINESS TODAY",
-    badge: "🥇",
+    title: "A vision takes route",
+    brand: "EPM WEALTH",
+    badge: "🚀",
     subtitle:
-      "We strengthened our advisory framework and began scaling a more disciplined and refined client experience.",
+      "After two decades in the corporate world, Mr. Dileep Hari stepped forward with purpose — founding EPM Wealth alongside a core team built on trust, expertise, and a shared belief in redefining personal wealth.",
   },
   {
     year: "2018",
-    title: "Bloomberg Wealth Strategy Recognition",
-    brand: "BLOOMBERG",
-    badge: "🏆",
+    title: "Beyond Boundaries",
+    brand: "EPM WEALTH",
+    badge: "🌍",
     subtitle:
-      "This phase reflected our growing focus on structured wealth strategies and high-quality investment planning.",
+      "EPM Wealth widened its horizon — entering the insurance landscape and launching dedicated NRI services, making world-class financial guidance accessible to Indians across the globe.",
   },
   {
     year: "2019",
-    title: "ET Wealth Investment Excellence",
-    brand: "ECONOMIC TIMES",
-    badge: "🎗️",
+    title: "Where Knowledge Meets Strategy",
+    brand: "EPM WEALTH",
+    badge: "📈",
     subtitle:
-      "A landmark year where our investment planning philosophy gained stronger recognition and credibility.",
+      "CPF’s Tanish Gupta joined as Director, elevating the firm’s advisory depth. Financial literacy emerged as a core vertical — sparking a movement that would reach thousands through more than 500 seminars and webinars across India till now.",
   },
   {
     year: "2020",
-    title: "Financial Express Wealth Leadership Honour",
-    brand: "FINANCIAL EXPRESS",
-    badge: "⭐",
+    title: "Standing Firm When It Mattered",
+    brand: "EPM WEALTH",
+    badge: "🛡️",
     subtitle:
-      "We adapted with resilience and strengthened our leadership in wealth management through stability and service quality.",
+      "In the midst of a global pandemic, EPM Wealth insured over 2,000 healthcare professionals — and crossed ₹50 Crore in AUM. A year that defined our character.",
   },
   {
     year: "2021",
-    title: "Outlook Money Best Wealth Manager",
-    brand: "OUTLOOK MONEY",
-    badge: "🏅",
+    title: "The Complete Picture",
+    brand: "EPM WEALTH",
+    badge: "🧩",
     subtitle:
-      "This year reflected stronger brand credibility, deeper relationships, and a more mature planning ecosystem.",
+      "EPM Wealth completed its wealth management ecosystem, offering clients a full suite of financial products under one roof.",
   },
   {
     year: "2022",
-    title: "Mint Best Wealth Advisory Firm",
-    brand: "MINT",
-    badge: "🥇",
+    title: "Built on Trust, Refined by Experience",
+    brand: "EPM WEALTH",
+    badge: "🔧",
     subtitle:
-      "A year of high-impact execution where our planning quality and service depth stood out meaningfully.",
+      "EPM Wealth introduced structured portfolio reviews with one-of-its-kind systems and crossed ₹100 crore in AUM, a landmark milestone.",
   },
   {
     year: "2023",
-    title: "Business Standard Elite Partner",
-    brand: "BUSINESS STANDARD",
-    badge: "🏆",
+    title: "Protecting the Legacy",
+    brand: "EPM WEALTH",
+    badge: "🏰",
     subtitle:
-      "We continued to elevate our premium positioning with stronger planning quality and trusted execution.",
+      "EPM Wealth added estate planning to its services, making sure that the legacy is always protected.",
   },
   {
     year: "2024",
-    title: "CNBCTV18 Wealth Excellence Award",
-    brand: "CNBCTV18",
-    badge: "💎",
+    title: "Dubai: Our Second Home",
+    brand: "EPM WEALTH",
+    badge: "✈️",
     subtitle:
-      "This phase reflected operational refinement, stronger outcomes, and a more elevated advisory presence.",
+      "EPM Wealth opened its doors in Dubai — stepping onto the global stage and bringing its trusted wealth philosophy to one of the world's most dynamic financial capitals.",
   },
   {
     year: "2025",
-    title: "ET Best Wealth Management Firms",
-    brand: "ECONOMIC TIMES",
-    badge: "🥇",
+    title: "Global Horizons, Local Wisdom",
+    brand: "EPM WEALTH",
+    badge: "🌐",
     subtitle:
-      "A year focused on expansion, operational strength, and the continued pursuit of measurable excellence.",
+      "EPM Wealth expanded its investment universe — adding GIFT City instruments to its platform, giving clients on both sides access to truly global wealth opportunities.",
   },
   {
     year: "2026",
-    title: "Tanish Gupta — Forbes 50 over 50",
-    brand: "FORBES GLOBAL",
-    badge: "🏆",
+    title: "Year of Milestone & Collaborations",
+    brand: "EPM WEALTH",
+    badge: "🤝",
     subtitle:
-      "A defining milestone showcasing the firm’s sustained excellence, trusted leadership, and premium advisory impact.",
+      "EPM Wealth crossed ₹150 Crore in AUM, a testament to the compounding trust of clients who have grown with us year after year. And collaborated with different unique hedge funds around the world bringing exclusive opportunities to our clients.",
   },
 ];
 
