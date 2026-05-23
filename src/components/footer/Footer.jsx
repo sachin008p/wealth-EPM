@@ -16,16 +16,13 @@ const Footer = () => {
 
         <div className="luxury-footer-container">
           <div className="luxury-footer-grid">
+
             {/* Brand Column */}
             <div className="luxury-footer-brand">
               <div className="luxury-footer-logo-wrap">
                 <img
                   src="https://epmwealth.com/wp-content/uploads/2023/06/logo-emp.png"
                   alt="EPM Wealth"
-                  width="1200"
-                  height="700"
-                  loading="lazy"
-                  decoding="async"
                   className="luxury-footer-logo"
                 />
               </div>
@@ -34,12 +31,13 @@ const Footer = () => {
                 <span>EPM</span> Wealth
               </h2>
 
-              <p className="luxury-footer-tagline">INSIGHT WITH INTEGRITY</p>
+              <p className="luxury-footer-tagline">
+                INSIGHT WITH INTEGRITY
+              </p>
 
               <p className="luxury-footer-description">
-                IRDAI, AMFI, BSE, NSE &amp; MCX registered wealth management firm.
-                Helping India's most prominent families bridge the gap between
-                their reality and their purpose.
+                IRDAI, AMFI, BSE, NSE &amp; MCX registered wealth management
+                firm.
               </p>
 
               <div className="luxury-footer-badges">
@@ -53,125 +51,125 @@ const Footer = () => {
                   href="https://www.instagram.com/epm_wealth/"
                   target="_blank"
                   rel="noreferrer"
-                  aria-label="Instagram"
                 >
                   <FaInstagram />
                 </a>
+
                 <a
                   href="https://www.youtube.com/@epmwealth101"
                   target="_blank"
                   rel="noreferrer"
-                  aria-label="YouTube"
                 >
                   <FaYoutube />
                 </a>
+
                 <a
                   href="https://www.linkedin.com/company/epm-wealth/"
                   target="_blank"
                   rel="noreferrer"
-                  aria-label="LinkedIn"
                 >
                   <FaLinkedinIn />
                 </a>
+
                 <a
                   href="https://www.facebook.com/epmwealthadvisor"
                   target="_blank"
                   rel="noreferrer"
-                  aria-label="Facebook"
                 >
                   <FaFacebookF />
                 </a>
+
                 <a
                   href="https://wa.me/919899939333"
                   target="_blank"
                   rel="noreferrer"
-                  aria-label="WhatsApp"
                 >
                   <FaWhatsapp />
                 </a>
               </div>
             </div>
 
-            {/* About */}
+            {/* Connect With Us */}
             <div className="luxury-footer-column">
-              <h3>ABOUT</h3>
-              <a href="#">Overview</a>
-              <a href="#">Leadership</a>
-              <a href="#">Brand Story</a>
-              <a href="#">ESG</a>
+              <h3>CONNECT WITH US</h3>
+
+              <a
+                href="https://www.instagram.com/epm_wealth/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Instagram
+              </a>
+
+              <a
+                href="https://www.youtube.com/@epmwealth101"
+                target="_blank"
+                rel="noreferrer"
+              >
+                YouTube
+              </a>
+
+              <a
+                href="https://www.linkedin.com/company/epm-wealth/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                LinkedIn
+              </a>
+
+              <a
+                href="https://www.facebook.com/epmwealthadvisor"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Facebook
+              </a>
             </div>
 
-            {/* Wealth Management */}
+            {/* Office Address */}
             <div className="luxury-footer-column">
-              <h3>WEALTH MANAGEMENT</h3>
-              <a href="#">Family Business</a>
-              <a href="#">Professionals &amp; CXOs</a>
-              <a href="#">Founders &amp; Entrepreneurs</a>
-              <a href="#">Women Clients</a>
+              <h3>OFFICE ADDRESS</h3>
+
+              <p>
+                612-A, 6th Floor, Wave Silver Tower,
+                Sector-18, Noida, Uttar Pradesh 201301
+              </p>
+
+              <a href="tel:+9101204264717">
+                +91 0120 426 4717
+              </a>
+
+              <a href="tel:+919899939333">
+                +91 98999 39333
+              </a>
+
+              <a href="mailto:info@epmwealth.com">
+                info@epmwealth.com
+              </a>
             </div>
 
-            {/* Asset Management */}
-            <div className="luxury-footer-column">
-              <h3>ASSET MANAGEMENT</h3>
-              <a href="#">Discretionary PMS</a>
-              <a href="#">Fund of Funds</a>
-              <a href="#">Smart Beta</a>
-              <a href="#">Global Investments</a>
-            </div>
-
-            {/* Navigate */}
-            <div className="luxury-footer-column">
-              <h3>NAVIGATE</h3>
-              <a href="#">Vault</a>
-              <a href="#">Careers</a>
-              <a href="#">Contact</a>
-              <a href="tel:+911206662012">+91 120 666 2012</a>
-              <a href="tel:+919899939333">+91 98999 39333</a>
-              <a href="mailto:info@epmwealth.com">info@epmwealth.com</a>
-              <a href="mailto:bdm@epmwealth.com">bdm@epmwealth.com</a>
-            </div>
-          </div>
-        </div>
-      </footer>
-
-      <footer className="epm-footer">
-        <div className="epm-footer-top-line"></div>
-
-        <div className="epm-footer-content">
-          <div className="epm-footer-column epm-footer-reveal">
-            <h3>EPM FINANCIAL &amp; INVESTMENT ADVISORS PVT LTD</h3>
-            <p>SEBI Registration No: INA00001811</p>
-            <p>CIN No: U74900MH2012PTC234921</p>
-            <p>PMS Registration No: INP000007818</p>
-          </div>
-
-          <div className="epm-footer-column epm-footer-reveal epm-delay-1">
-            <h3>EPM FUND MANAGERS PVT LTD</h3>
-            <p>CIN No: U65990MH2020PTC340389</p>
-            <p>FOF I — IN/AIF2/21–22/0876 (Category 2 AIF)</p>
-          </div>
-
-          <div className="epm-footer-column epm-footer-reveal epm-delay-2">
-            <h3>STATUS OF COMPLAINTS</h3>
-            <p>Beginning of the month: Nil</p>
-            <p>Received this month: Nil</p>
-            <p>Resolved during the month: Nil</p>
-            <p>Pending at end of month: Nil</p>
           </div>
         </div>
 
         <div className="epm-footer-bottom-line"></div>
 
-        <div className="epm-footer-bottom epm-footer-reveal epm-delay-3">
+        <div className="epm-footer-bottom">
           <p>
-            © 2026 EPM Wealth. All Rights Reserved. AMFI Reg. 100255 | BSE Reg.
-            1197501
+            © 2026 EPM Wealth. All Rights Reserved.
           </p>
 
           <div className="epm-footer-links">
-            <a href="/privacy-policy">Privacy Policy</a>
-            <a href="/disclaimer">Disclaimer</a>
-            <a href="/regulatory-information">Regulatory Information</a>
+            <a href="/privacy-policy">
+              Privacy Policy
+            </a>
+
+            <a href="/disclaimer">
+              Disclaimer
+            </a>
+
+            <a href="/regulatory-information">
+              Regulatory Information
+            </a>
           </div>
         </div>
       </footer>
@@ -181,7 +179,6 @@ const Footer = () => {
         target="_blank"
         rel="noopener noreferrer"
         className="epm-whatsapp-float"
-        aria-label="Chat on WhatsApp"
       >
         <span className="wa-shine"></span>
         <FaWhatsapp />
