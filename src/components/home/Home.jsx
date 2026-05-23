@@ -32,6 +32,7 @@ import { MdFamilyRestroom } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 import featuresImg from "../../assets/feature/features.webp";
+import features2Img from "../../assets/feature/features2.webp";
 import featureImg from "../../assets/feature/feature.webp";
 import featuressImg from "../../assets/feature/featuress.webp";
 
@@ -55,8 +56,7 @@ const features = [
   },
   {
     id: 2,
-    bgImage:
-      "https://i.pinimg.com/1200x/cf/d6/4c/cfd64ce861ac53a14454d78e2fb887f7.jpg",
+    bgImage: features2Img,
     title: "Technically Driven",
     description: "User oriented digital transaction anytime anywhere",
     meta: "DIGITAL TRANSACTIONS",
@@ -1262,26 +1262,6 @@ const Home = () => {
                 <a href="#contact" className="vault-link">
                   Explore Vault <span>→</span>
                 </a>
-
-                <div className="vault-signup-box">
-                  <h3>Sign up for priority access</h3>
-                  <p>Get our insights delivered straight to your inbox.</p>
-
-                  <form className="vault-form" onSubmit={handleSubscribe}>
-                    <input
-                      type="email"
-                      placeholder="Email Address"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      required
-                    />
-                    <button type="submit" disabled={loading}>
-                      {loading ? "SENDING..." : "SUBSCRIBE →"}
-                    </button>
-                  </form>
-
-                  {message && <p className="vault-form-message">{message}</p>}
-                </div>
               </div>
 
               <div className="vault-featured-card">
@@ -1295,14 +1275,6 @@ const Home = () => {
                   decoding="async"
                 />
                 <div className="vault-featured-overlay"></div>
-
-                <div className="vault-featured-content">
-                  <span>
-                    {featuredArticle.type} · {featuredArticle.meta}
-                  </span>
-                  <h3>{featuredArticle.title}</h3>
-                  <p>{featuredArticle.desc}</p>
-                </div>
               </div>
             </div>
 

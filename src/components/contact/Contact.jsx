@@ -180,7 +180,7 @@ const Contact = () => {
       <div className="legacy-contact-container" ref={heroRef}>
         <div className="legacy-contact-grid" ref={shellRef}>
           <div className="legacy-contact-left">
-            <div className="legacy-contact-kicker">CONNECT WITH EPM WEALTH</div>
+            <div className="legacy-contact-kicker">CONNECT WITH US</div>
 
             <h1 className="legacy-contact-heading">
               Your legacy begins with a conversation
@@ -241,7 +241,7 @@ const Contact = () => {
                   <p>
                     info@epmwealth.com
                     <br />
-                    careers@epmwealth.com
+                    bdm@epmwealth.com
                   </p>
                 </div>
               </div>
@@ -260,17 +260,37 @@ const Contact = () => {
             <div className="legacy-follow-block">
               <h3>FOLLOW US</h3>
               <div className="legacy-socials">
-                <a href="#" aria-label="LinkedIn">
+                <a
+                  href="https://www.linkedin.com/company/epm-wealth/"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="LinkedIn"
+                >
                   <FaLinkedinIn />
                 </a>
-                <a href="#" aria-label="YouTube">
+                <a
+                  href="https://www.youtube.com/@epmwealth101"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="YouTube"
+                >
                   <FaYoutube />
                 </a>
-                <a href="#" aria-label="X">
-                  <FaTimes />
-                </a>
-                <a href="#" aria-label="Instagram">
+                <a
+                  href="https://www.instagram.com/epm_wealth/"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Instagram"
+                >
                   <FaInstagram />
+                </a>
+                <a
+                  href="https://www.facebook.com/epmwealthadvisor"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Facebook"
+                >
+                  <FaFacebookF />
                 </a>
               </div>
             </div>

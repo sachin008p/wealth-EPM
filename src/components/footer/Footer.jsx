@@ -37,31 +37,56 @@ const Footer = () => {
               <p className="luxury-footer-tagline">INSIGHT WITH INTEGRITY</p>
 
               <p className="luxury-footer-description">
-                AMFI &amp; BSE registered wealth management firm. Helping
-                India's most prominent families bridge the gap between their
-                reality and their purpose since 2011.
+                IRDAI, AMFI, BSE, NSE &amp; MCX registered wealth management firm.
+                Helping India's most prominent families bridge the gap between
+                their reality and their purpose.
               </p>
 
               <div className="luxury-footer-badges">
                 <span>AMFI 100255</span>
                 <span>BSE 1197501</span>
-                <span>SEBI REG.</span>
+                <span>IRDAI</span>
               </div>
 
               <div className="luxury-footer-socials">
-                <a href="#" aria-label="Instagram">
+                <a
+                  href="https://www.instagram.com/epm_wealth/"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Instagram"
+                >
                   <FaInstagram />
                 </a>
-                <a href="#" aria-label="YouTube">
+                <a
+                  href="https://www.youtube.com/@epmwealth101"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="YouTube"
+                >
                   <FaYoutube />
                 </a>
-                <a href="#" aria-label="LinkedIn">
+                <a
+                  href="https://www.linkedin.com/company/epm-wealth/"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="LinkedIn"
+                >
                   <FaLinkedinIn />
                 </a>
-                <a href="#" aria-label="Facebook">
+                <a
+                  href="https://www.facebook.com/epmwealthadvisor"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Facebook"
+                >
                   <FaFacebookF />
                 </a>
-                <a href="#" aria-label="WhatsApp">
+                <a
+                  href="https://wa.me/919899939333"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="WhatsApp"
+                >
                   <FaWhatsapp />
                 </a>
               </div>
@@ -100,8 +125,10 @@ const Footer = () => {
               <a href="#">Vault</a>
               <a href="#">Careers</a>
               <a href="#">Contact</a>
-              <a href="tel:+919899939333">+919899939333</a>
+              <a href="tel:+911206662012">+91 120 666 2012</a>
+              <a href="tel:+919899939333">+91 98999 39333</a>
               <a href="mailto:info@epmwealth.com">info@epmwealth.com</a>
+              <a href="mailto:bdm@epmwealth.com">bdm@epmwealth.com</a>
             </div>
           </div>
         </div>
