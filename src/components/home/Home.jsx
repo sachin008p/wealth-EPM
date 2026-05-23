@@ -1233,12 +1233,7 @@ const Home = () => {
                     <h3>{item.title}</h3>
                     <p>{item.description}</p>
 
-                    <div className="decision-card-footer">
-                      <span className="decision-card-label">
-                        EXPLORE SERVICE
-                      </span>
-                      <span className="decision-card-arrow">→</span>
-                    </div>
+                  
                   </div>
                 </div>
               ))}
