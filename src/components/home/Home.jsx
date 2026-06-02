@@ -1316,7 +1316,7 @@ const Home = () => {
       {selectedArticle && (
         <div className="epm-article-modal-overlay" onClick={() => setSelectedArticle(null)}>
           <div className="epm-article-modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="epm-article-modal-close" onClick={() => setSelectedArticle(null)} aria-label="Close modal">
+            <button className="epm-article-modal-close" onClick={() => setSelectedArticle(null)} aria-label="Close  modal">
               &times;
             </button>
             <div className="epm-article-modal-header">
