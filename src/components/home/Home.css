@@ -1933,7 +1933,7 @@ body {
 .solutions-link {
   display: inline-flex;
   align-items: center;
-  margin-left: 50px;
+  margin-left: 0;
   gap: 10px;
   font-family: "Manrope", sans-serif;
   font-size: 14px;
@@ -2033,28 +2033,79 @@ body {
 
 .decision-card {
   position: relative;
-  min-height: 310px;
+  min-height: 340px;
   overflow: hidden;
   isolation: isolate;
   cursor: pointer;
-  background-size: cover;
-  background-position: center;
+  background-size: 55%;
+  background-position: right center;
   background-repeat: no-repeat;
+  background-color: #454f60;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  justify-content: left-center;
+}
+
+
+
+.decision-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  left: 0;
+  width: 55%;
+  background: inherit;
+  background-size: cover;
+  background-position: left center;
+  filter: blur(18px) brightness(0.4);
+  transform: scale(1.08);
+  z-index: 0;
 }
 
 .decision-card-bg {
   position: absolute;
   inset: 0;
+  left: 45%;
   background: inherit;
   background-size: cover;
-  background-position: center;
+  background-position: right center;
   transform: scale(1.02);
-  transition:
-    transform 0.75s ease,
-    filter 0.75s ease;
-  z-index: 0;
+  transition: transform 0.75s ease, filter 0.75s ease;
+  z-index: 1;
 }
 
+.decision-card-dark-layer {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(13, 22, 36, 0.85) 40%,
+    rgba(13, 22, 36, 0.2) 100%
+  );
+  z-index: 2;
+}
+
+.decision-card-blur-panel {
+  display: none;
+}
+
+.decision-card-content {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  z-index: 3;
+  color: #fff;
+  text-align: left;
+  width: 220px; /* width kam rakhne se text wrap hoga */
+}
+
+.decision-card-content h3 {
+  font-size: 42px;
+  line-height: 1.1;
+  margin: 0;
+}
 .decision-card:hover .decision-card-bg {
   transform: scale(1.08);
   filter: saturate(1.04);
@@ -2220,6 +2271,8 @@ body {
   background: linear-gradient(180deg, #fffdf9 0%, #f9f4ed 100%);
   border: 1px solid rgba(159, 109, 61, 0.12);
   box-shadow: 0 18px 40px rgba(22, 30, 45, 0.06);
+
+  margin: 0 auto;
 }
 
 .vault-label {
@@ -2334,16 +2387,16 @@ body {
 
 .vault-featured-card {
   position: relative;
-  min-height: 540px;
-  max-height: 540px;
+  min-height: 500px;
+  max-height: 400px;
   overflow: hidden;
-  border-radius: 30px;
+    border-radius: 30px;
   box-shadow: 0 24px 50px rgba(17, 24, 39, 0.12);
 }
 
 .vault-featured-image {
   width: 100%;
-  height: 100%;
+  height: 200%;
   object-fit: cover;
   transition: transform 0.8s ease;
 }
@@ -2746,7 +2799,6 @@ body {
   overflow: hidden;
   width: 100%;
 }
-
 .awards-horizontal-scroll-track {
   display: flex;
   gap: 18px;
@@ -2757,7 +2809,7 @@ body {
 .awards-gallery-card {
   flex: 0 0 270px;
   width: 270px;
-  height: 300px;
+  height: 200px;
   border-radius: 24px;
   overflow: hidden;
   position: relative;
@@ -2768,6 +2820,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  
 }
 
 .awards-gallery-card-overlay {
@@ -5161,6 +5214,7 @@ video {
   }
 
   /* ── Solutions ── */
+
   .solutions-container {
     display: flex !important;
     flex-direction: column !important;
@@ -5171,6 +5225,7 @@ video {
     padding-left: 0 !important;
     text-align: center;
   }
+  
 
   .solutions-left h2 {
     margin: 0 0 24px;
@@ -7814,7 +7869,14 @@ body {
   }
 }
 
-/* ── 9. HERO VIDEO — STABLE POSTER BOX ───────────────────────
+/* ── 9. HERO VIDEO — STABLE
+
+
+
+
+
+
+POSTER BOX ───────────────────────
    While video loads the poster should fill the same box with no shift.
    The video has position:absolute inset:0 so it already matches,
    but add aspect-ratio fallback for environments that don't autosize.
@@ -7822,7 +7884,7 @@ body {
 .epm-hero-video {
   /* Ensure poster respects box even before video metadata loads */
   background-color: #000; /* fallback before poster loads */
-  background-image: url('/poster.webp');
+  background-image: url('/videos/hero-poster.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -7883,3 +7945,223 @@ body {
 }
 
 /* END OF CORE WEB VITALS SAFE PATCH */
+
+/* =========================================================
+   SOLUTIONS SECTION TYPING EFFECTS & CURSORS
+   ========================================================= */
+.solutions-typed-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 50px;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  min-height: 2.2rem;
+}
+
+.solutions-typed-text {
+  font-family: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  font-size: clamp(1.1rem, 2vw, 1.7rem);
+  font-weight: 500;
+  color: #a15b19; /* premium gold-brown brand color */
+  letter-spacing: 0.05em;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+.solutions-typed-row .epm-typed-caret {
+  background: linear-gradient(180deg, #a15b19, #cfab7a);
+}
+
+/* Clickable Article Cards & Hover states */
+.vault-featured-card,
+.vault-article-card {
+  cursor: pointer;
+  transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.35s ease;
+}
+
+.vault-featured-card:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.vault-article-card:hover {
+  transform: translateY(-6px);
+}
+
+/* =========================================================
+   ARTICLE MODAL (LUXURY DARK GLASSMORPHISM)
+   ========================================================= */
+.epm-article-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(8, 12, 19, 0.72);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: modalFadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.epm-article-modal-content {
+  background: rgba(17, 22, 33, 0.94);
+  border: 1px solid rgba(198, 142, 88, 0.28);
+  border-radius: 24px;
+  box-shadow: 
+    0 24px 60px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 0 0 1px rgba(198, 142, 88, 0.08);
+  width: 100%;
+  max-width: 820px;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  padding: 48px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(198, 142, 88, 0.3) rgba(255, 255, 255, 0.02);
+  animation: modalSlideUp 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Scrollbar support */
+.epm-article-modal-content::-webkit-scrollbar {
+  width: 6px;
+}
+.epm-article-modal-content::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 999px;
+}
+.epm-article-modal-content::-webkit-scrollbar-thumb {
+  background: rgba(198, 142, 88, 0.3);
+  border-radius: 999px;
+}
+.epm-article-modal-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(198, 142, 88, 0.5);
+}
+
+.epm-article-modal-close {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 32px;
+  cursor: pointer;
+  transition: color 0.25s ease, transform 0.25s ease;
+  line-height: 1;
+}
+
+.epm-article-modal-close:hover {
+  color: #c9a66b;
+  transform: rotate(90deg) scale(1.1);
+}
+
+.epm-article-modal-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+  font-family: "Manrope", "Inter", sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.epm-article-modal-type {
+  color: #c9a66b;
+  border: 1px solid rgba(198, 142, 88, 0.35);
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: rgba(198, 142, 88, 0.05);
+}
+
+.epm-article-modal-date,
+.epm-article-modal-meta {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.epm-article-modal-title {
+  font-family: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.7rem);
+  font-weight: 600;
+  line-height: 1.25;
+  color: #ffffff;
+  margin-bottom: 28px;
+  letter-spacing: 0.3px;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.epm-article-modal-image-wrap {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+}
+
+.epm-article-modal-image-wrap img {
+  width: 100%;
+  height: auto;
+  max-height: 380px;
+  object-fit: cover;
+  display: block;
+}
+
+.epm-article-modal-body p {
+  font-family: "Manrope", "Inter", sans-serif;
+  font-size: 15px;
+  line-height: 1.85;
+  color: rgba(255, 255, 255, 0.78);
+  margin-bottom: 24px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+}
+
+.epm-article-modal-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* Modal Animations */
+@keyframes modalFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modalSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .solutions-typed-row {
+    margin-left: 20px;
+  }
+  .epm-article-modal-content {
+    padding: 32px 24px 28px;
+    border-radius: 20px;
+    max-height: 90vh;
+  }
+  .epm-article-modal-close {
+    top: 16px;
+    right: 18px;
+  }
+  .epm-article-modal-title {
+    margin-bottom: 20px;
+  }
+  .epm-article-modal-body p {
+    font-size: 14px;
+    line-height: 1.75;
+    margin-bottom: 18px;
+  }
+}

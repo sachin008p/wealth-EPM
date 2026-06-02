@@ -1,9 +1,9 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Home.css";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import emailjs from "@emailjs/browser";
+
 import {
   FaInstagram,
   FaYoutube,
@@ -11,34 +11,35 @@ import {
   FaFacebookF,
 } from "react-icons/fa";
 
-import {
-  FaCreditCard,
-  FaChartLine,
-  FaCarSide,
-  FaHeart,
-  FaHome,
-  FaUserMd,
-  FaGraduationCap,
-  FaShieldAlt,
-  FaUmbrella,
-  FaHandshake,
-  FaTachometerAlt,
-  FaPlane,
-} from "react-icons/fa";
-
-import { GiBigDiamondRing } from "react-icons/gi";
-import { MdFamilyRestroom } from "react-icons/md";
 
 import { Link } from "react-router-dom";
 
 import featuresImg from "../../assets/feature/features.webp";
-import features2Img from "../../assets/feature/features2.webp";
-import featureImg from "../../assets/feature/feature.webp";
-import featuressImg from "../../assets/feature/featuress.webp";
-
+import technicalImg from "../../assets/feature/featuress.png";
+import transperenImg from "../../assets/feature/featuress.webp";
+import dataImg from "../../assets/feature/feature.webp";
+import orbitImg from "../../assets/home/orbit.webp";
 import articleImg from "../../assets/home/article.webp";
 
-import heroVaultImg from "../../assets/home/epm-vault-hero.webp";
+// New local images for Decisions and Articles sections
+// import technicalImg from "../../assets/home/technical.png";
+// import transperenImg from "../../assets/home/transperen.png";
+// import dataImg from "../../assets/home/data.png";
+import epmVaultHeroImg from "../../assets/home/epm-vault-hero.webp";
+import unionBudgetImg from "../../assets/home/articles/union-budget.jpg";
+import silverGainsImg from "../../assets/home/articles/silver-gains.jpg";
+import goldImg from "../../assets/home/articles/gold.jpg";
+import giftCityImg from "../../assets/home/articles/gift-city.jpg";
+// import awardNewImg from "../../assets/home/awards/epm-award-9.jpeg";
+import award1 from "../../assets/home/awards/epm-award-1.jpeg";
+import award2 from "../../assets/home/awards/epm-award-2.jpeg";
+import award3 from "../../assets/home/awards/epm-award-3.jpeg";
+import award5 from "../../assets/home/awards/epm-award-5.jpeg";
+import award6 from "../../assets/home/awards/epm-award-6.jpeg";
+import award7 from "../../assets/home/awards/epm-award-7.jpeg";
+import award8 from "../../assets/home/awards/epm-award-8.jpeg";
+import award9 from "../../assets/home/awards/epm-award-9.jpeg";
+import awardStage from "../../assets/home/awards/award-stage.jpeg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -50,30 +51,40 @@ const features = [
   {
     id: 1,
     bgImage: featuresImg,
-    title: "Customized For You",
-    description: "Easy and simple to understand tailor-made solutions for you",
-    meta: "PERSONALISED SOLUTIONS",
+    title: (
+    <>
+      Customized  <br />
+     For You
+    </>
+  ),
+    description: "",
+    meta: "",
   },
   {
-    id: 2,
-    bgImage: features2Img,
-    title: "Technically Driven",
-    description: "User oriented digital transaction anytime anywhere",
-    meta: "DIGITAL TRANSACTIONS",
-  },
+  id: 2,
+  bgImage: technicalImg,
+  title: (
+    <>
+      Technically <br />
+      Driven
+    </>
+  ),
+  description: "",
+  meta: "",
+},
   {
     id: 3,
-    bgImage: featuressImg,
-    title: "Transparent And Client Centric",
-    description: "Track where and how your money is invested at all times",
-    meta: "CLIENT-FIRST APPROACH",
+    bgImage: transperenImg,
+    title: "Transparent & Client Centric",
+    description: "",
+    meta: "",
   },
   {
     id: 4,
-    bgImage: featureImg,
+    bgImage: dataImg,
     title: "Data-Driven",
-    description: "Powered by return, guided by data",
-    meta: "SMART ANALYTICS",
+    description: "",
+    meta: "",
   },
 ];
 
@@ -84,44 +95,61 @@ const articles = [
     meta: "CIO'S DESK · 03 MARCH 2026",
     title: "Exclusive insights for enduring wealth",
     desc: "At EPM Wealth, we deliver refined strategies and deep market intelligence tailored for individuals who seek more than just returns — they seek legacy.",
-    image: articleImg,
+    image: epmVaultHeroImg,
     featured: true,
+    content: [
+      "At EPM Wealth, we believe that true wealth is not just about beating a benchmark—it is about securing a legacy that spans generations. In today's volatile macroeconomic environment, traditional portfolios are no longer enough. We focus on structured asset allocation, incorporating global equities, alternative assets, and tax-efficient structures to shield your capital from inflationary pressures and market shifts.",
+      "Our CIO Office continuously monitors global capital flows, policy changes, and emerging asset classes. By combining deep fundamental analysis with modern technological execution, we identify asymmetric risk-reward opportunities before they become mainstream. Whether it is navigating cross-border investments or setting up robust estate structures, our approach remains client-centric and bespoke.",
+      "Enduring wealth requires patience, discipline, and a clear vision. Our dedicated wealth managers work closely with your family office and legal advisors to ensure every investment fits seamlessly into your broader legacy plan. We invite you to explore our research and partner with us on your journey to financial excellence."
+    ]
   },
   {
     id: 2,
-    type: "ARTICLE",
     meta: "",
-    title: "Union Budget 2026–27 Decoded",
-    date: "03 February 2026",
-    image:
-      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&q=75&auto=format&fit=crop",
+    title: "Union Budget 2025-27 Declared",
+    date: "03-Feb-26",
+    image: unionBudgetImg,
+    content: [
+      "The recently declared Union Budget 2025-27 introduces pivotal shifts in India's fiscal policies, emphasizing infrastructure spending, digital economy expansion, and structural tax reforms. For individual taxpayers and wealth creators, the revised tax slabs under the new regime present new optimization opportunities. It is crucial to re-evaluate your investment instruments to align with these regulatory changes.",
+      "A major highlight of the budget is the rationalization of capital gains tax structures. Short-term and long-term capital gains rates have been adjusted to streamline investments across equities, debt, and real estate. Additionally, new incentives for offshore banking units in GIFT City point towards India's growing ambition to become a global financial hub.",
+      "At EPM Wealth, our tax advisory team is already working with clients to restructure portfolios in light of these declarations. By adjusting asset allocation between debt instruments, equity funds, and hybrid products, we ensure your post-tax yields are maximized while maintaining risk parameters."
+    ]
   },
   {
     id: 3,
-    type: "ARTICLE · CIO'S DESK",
     meta: "",
-    title: "Silver: Protecting Gains, Avoiding FOMO",
-    date: "05 March 2026",
-    image:
-      "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&q=75&auto=format&fit=crop",
+    title: "Silver: Protecting Gains, Avoiding Pitfalls",
+    date: "05-Mar-26",
+    image: silverGainsImg,
+    content: [
+      "Silver has experienced unprecedented price action over the past quarters, driven by industrial demand in green technologies, solar panels, and electronics, coupled with traditional safe-haven buying. However, with rapid price appreciation comes heightened volatility. Investors must distinguish between structural long-term gains and speculative bubbles.",
+      "While gold remains the cornerstone of precious metal allocation, silver offers a higher beta play on economic recovery. However, retail investors often fall into the trap of buying at peak prices out of FOMO (Fear Of Missing Out). Protecting your gains in silver requires systematic profit booking and the use of trailing stops rather than holding onto concentrated positions indefinitely.",
+      "We recommend a disciplined, percentage-based allocation to precious metals as part of a diversified portfolio. Silver should serve as a tactical overlay rather than a core long-term holdings base. Speak with your portfolio manager to review your current metal exposure and rebalance accordingly."
+    ]
   },
   {
     id: 4,
-    type: "ARTICLE · CIO'S DESK",
     meta: "",
     title: "Where does gold go from here?",
-    date: "02 April 2026",
-    image:
-      "https://images.unsplash.com/photo-1610375461246-83df859d849d?w=400&q=75&auto=format&fit=crop",
+    date: "02-Apr-26",
+    image: goldImg,
+    content: [
+      "As central banks around the globe continue to accumulate gold reserves at record rates, the metal has solidified its position as the ultimate hedge against geopolitical uncertainty and currency devaluation. The debate now is whether current gold price levels are sustainable, or if a consolidation phase is imminent.",
+      "Historically, gold thrives in low interest rate environments and times of global credit expansion. Even as interest rates remain sticky, persistent inflationary pressures and currency fluctuations have sustained gold's upward trajectory. Our research indicates that gold remains a critical hedge against potential systemic risks in the global banking sector.",
+      "For Indian investors, gold has deep cultural and financial significance. However, moving away from physical gold towards sovereign gold bonds or digital gold funds can yield better tax efficiencies and additional interest income. We advise keeping a 5% to 10% structural allocation to gold to protect your portfolio's purchasing power."
+    ]
   },
   {
     id: 5,
-    type: "ARTICLE · CIO'S DESK",
     meta: "",
     title: "The GIFT City Advantage",
-    date: "05 May 2026",
-    image:
-      "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=400&q=75&auto=format&fit=crop",
+    date: "05-May-26",
+    image: giftCityImg,
+    content: [
+      "Gujarat International Finance Tec-City (GIFT City) is rapidly emerging as India's premier International Financial Services Centre (IFSC). It offers Indian residents and non-residents a unique regulatory environment, featuring tax exemptions, liberalized remittance schemes, and access to international financial products right on domestic soil.",
+      "For high-net-worth individuals (HNIs) and family offices, GIFT City provides a seamless route to invest in global stocks, international mutual funds, and foreign currency-denominated assets. With a 10-year tax holiday and zero capital gains tax on specified transactions, it represents a highly efficient vehicle for global wealth diversification.",
+      "EPM Wealth has established a dedicated desk to guide clients through the complexities of setting up and managing investments in GIFT City. From understanding the Liberalized Remittance Scheme (LRS) limits to selecting top-performing offshore funds, we help you leverage this strategic advantage to build a truly global legacy."
+    ]
   },
 ];
 
@@ -130,7 +158,6 @@ const awardsData = [
     year: "2017",
     title: "A vision takes route",
     brand: "EPM WEALTH",
-    badge: "🚀",
     subtitle:
       "After two decades in the corporate world, Mr. Dileep Hari stepped forward with purpose — founding EPM Wealth alongside a core team built on trust, expertise, and a shared belief in redefining personal wealth.",
   },
@@ -138,7 +165,6 @@ const awardsData = [
     year: "2018",
     title: "Beyond Boundaries",
     brand: "EPM WEALTH",
-    badge: "🌍",
     subtitle:
       "EPM Wealth widened its horizon — entering the insurance landscape and launching dedicated NRI services, making world-class financial guidance accessible to Indians across the globe.",
   },
@@ -146,7 +172,6 @@ const awardsData = [
     year: "2019",
     title: "Where Knowledge Meets Strategy",
     brand: "EPM WEALTH",
-    badge: "📈",
     subtitle:
       "CPF’s Tanish Gupta joined as Director, elevating the firm’s advisory depth. Financial literacy emerged as a core vertical — sparking a movement that would reach thousands through more than 500 seminars and webinars across India till now.",
   },
@@ -154,7 +179,6 @@ const awardsData = [
     year: "2020",
     title: "Standing Firm When It Mattered",
     brand: "EPM WEALTH",
-    badge: "🛡️",
     subtitle:
       "In the midst of a global pandemic, EPM Wealth insured over 2,000 healthcare professionals — and crossed ₹50 Crore in AUM. A year that defined our character.",
   },
@@ -162,7 +186,6 @@ const awardsData = [
     year: "2021",
     title: "The Complete Picture",
     brand: "EPM WEALTH",
-    badge: "🧩",
     subtitle:
       "EPM Wealth completed its wealth management ecosystem, offering clients a full suite of financial products under one roof.",
   },
@@ -170,7 +193,6 @@ const awardsData = [
     year: "2022",
     title: "Built on Trust, Refined by Experience",
     brand: "EPM WEALTH",
-    badge: "🔧",
     subtitle:
       "EPM Wealth introduced structured portfolio reviews with one-of-its-kind systems and crossed ₹100 crore in AUM, a landmark milestone.",
   },
@@ -178,7 +200,6 @@ const awardsData = [
     year: "2023",
     title: "Protecting the Legacy",
     brand: "EPM WEALTH",
-    badge: "🏰",
     subtitle:
       "EPM Wealth added estate planning to its services, making sure that the legacy is always protected.",
   },
@@ -186,7 +207,6 @@ const awardsData = [
     year: "2024",
     title: "Dubai: Our Second Home",
     brand: "EPM WEALTH",
-    badge: "✈️",
     subtitle:
       "EPM Wealth opened its doors in Dubai — stepping onto the global stage and bringing its trusted wealth philosophy to one of the world's most dynamic financial capitals.",
   },
@@ -194,7 +214,6 @@ const awardsData = [
     year: "2025",
     title: "Global Horizons, Local Wisdom",
     brand: "EPM WEALTH",
-    badge: "🌐",
     subtitle:
       "EPM Wealth expanded its investment universe — adding GIFT City instruments to its platform, giving clients on both sides access to truly global wealth opportunities.",
   },
@@ -202,24 +221,27 @@ const awardsData = [
     year: "2026",
     title: "Year of Milestone & Collaborations",
     brand: "EPM WEALTH",
-    badge: "🤝",
     subtitle:
       "EPM Wealth crossed ₹150 Crore in AUM, a testament to the compounding trust of clients who have grown with us year after year. And collaborated with different unique hedge funds around the world bringing exclusive opportunities to our clients.",
   },
 ];
 
+// 
+
 const galleryImages = [
-  "https://epmwealth.com/wp-content/uploads/2023/06/epm-award-8.jpeg",
-  "https://epmwealth.com/wp-content/uploads/2023/06/epm-award-7.jpeg",
-  "https://epmwealth.com/wp-content/uploads/2023/06/epm-award-6.jpeg",
-  "https://epmwealth.com/wp-content/uploads/2023/06/epm-award-5.jpeg",
-  "https://epmwealth.com/wp-content/uploads/2023/06/epm-award-3.jpeg",
-  "https://epmwealth.com/wp-content/uploads/2023/06/epm-award-2.jpeg",
-  "https://epmwealth.com/wp-content/uploads/2023/06/epm-award-1.jpeg",
-  "https://epmwealth.com/wp-content/uploads/2023/06/WhatsApp-Image-2023-06-01-at-12.36.49-PM.jpeg",
+  award9,
+  award8,
+  award7,
+  award6,
+  award5,
+  award3,
+  award2,
+  award1,
+  awardStage,
 ];
 
 const duplicatedGalleryImages = [...galleryImages, ...galleryImages];
+
 
 const TYPED_LINES = [
   "It all begins with you.",
@@ -235,7 +257,7 @@ const coreValuesData = [
     letter: "R",
     title: "RELATIONSHIP",
     description:
-      "We build lasting partnerships grounded in trust, transparency, and a genuine commitment to long-term success.",
+      "We build lasting relationships grounded in trust, transparency, and a genuine commitment to long-term growth.",
     image:
       "https://images.unsplash.com/photo-1556740749-887f6717d7e4?w=900&q=80&auto=format&fit=crop",
   },
@@ -391,12 +413,11 @@ const Home = () => {
   const videoContainerRef = useRef(null);
   const revealOverlayRef = useRef(null);
   const heroTextRef = useRef(null);
-  const socialIconsRef = useRef(null);
 
   const [videoEnded, setVideoEnded] = useState(false);
-  const [showTyped, setShowTyped] = useState(false);
+  const [showTyped, setShowTyped] = useState(true);
   const [typedText, setTypedText] = useState("");
-  const [socialVisible, setSocialVisible] = useState(false);
+  const [selectedArticle, setSelectedArticle] = useState(null);
 
   /* ── Mobile video deferred load — improves LCP by ~0.6–1s on mobile ── */
   useEffect(() => {
@@ -412,7 +433,7 @@ const Home = () => {
       if (video.src) return; // already loaded
       video.src = originalSrc;
       video.load();
-      video.play().catch(() => {}); // graceful autoplay fallback
+      video.play().catch(() => { }); // graceful autoplay fallback
     };
     if (document.readyState === "complete") {
       // page already loaded — use idle callback for low priority
@@ -432,17 +453,13 @@ const Home = () => {
     }
   }, []);
 
-  const [experience, ref1] = useCountUp(30, 2000, "+");
+  const [experience, ref1] = useCountUp(30, 2000, "+ Years");
   const [clients, ref2] = useCountUp(1000, 2400, "+");
   const [locations, ref3] = useCountUp(2, 1800);
-  const [aum, ref4] = useCountUp(150, 2400, " Cr", "₹");
+  const [aum, ref4] = useCountUp(150, 2400, " Cr.+");
 
   const featuredArticle = articles.find((item) => item.featured);
   const bottomArticles = articles.filter((item) => !item.featured);
-
-  const [email, setEmail] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState("");
 
   const [activeYear, setActiveYear] = useState("2022");
   const [activeTestimonial, setActiveTestimonial] = useState(0);
@@ -451,7 +468,6 @@ const Home = () => {
   const sectionRef = useRef(null);
   const cardRef = useRef(null);
   const quoteRef = useRef(null);
-  const clientRowRef = useRef(null);
   const imageWrapRef = useRef(null);
   const dotsRef = useRef(null);
   const autoSlideRef = useRef(null);
@@ -461,28 +477,6 @@ const Home = () => {
 
   const activeData =
     awardsData.find((item) => item.year === activeYear) || awardsData[0];
-
-  /* ── Social icon scroll visibility (scroll-based, works with sticky hero) ── */
-  useEffect(() => {
-    const hero = heroWrapRef.current;
-    if (!hero) return;
-
-    const handleSocialVisibility = () => {
-      const heroBottom = hero.offsetTop + hero.offsetHeight;
-      setSocialVisible(window.scrollY > heroBottom - 80);
-    };
-
-    handleSocialVisibility();
-    window.addEventListener("scroll", handleSocialVisibility, {
-      passive: true,
-    });
-    window.addEventListener("resize", handleSocialVisibility);
-
-    return () => {
-      window.removeEventListener("scroll", handleSocialVisibility);
-      window.removeEventListener("resize", handleSocialVisibility);
-    };
-  }, []);
 
   useEffect(() => {
     if (window.innerWidth <= 768) return;
@@ -859,190 +853,6 @@ const Home = () => {
     };
   }, [showTyped]);
 
-  const handleSubscribe = async (e) => {
-    e.preventDefault();
-
-    if (!email.trim()) {
-      setMessage("Please enter email address");
-      return;
-    }
-
-    try {
-      setLoading(true);
-      setMessage("");
-
-      await emailjs.send(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
-        {
-          user_email: email,
-          to_name: "Ravindra",
-          message: `New vault subscription received from: ${email}`,
-        },
-        "YOUR_PUBLIC_KEY",
-      );
-
-      setMessage("Subscription successful");
-      setEmail("");
-    } catch (error) {
-      console.error("EmailJS Error:", error);
-      setMessage("Something went wrong. Please try again.");
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const [sipData, setSipData] = useState({
-    amount: "",
-    frequency: "monthly",
-    years: "",
-    expectedReturn: "",
-    inflationMode: "none",
-    inflationRate: "",
-  });
-
-  const [sipResult, setSipResult] = useState(null);
-
-  const handleSipChange = (e) => {
-    const { name, value } = e.target;
-    setSipData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
-  const formatCurrency = (value) => {
-    if (!Number.isFinite(value)) return "₹ 0";
-    return new Intl.NumberFormat("en-IN", {
-      style: "currency",
-      currency: "INR",
-      maximumFractionDigits: 0,
-    }).format(value);
-  };
-
-  const getPeriodsPerYear = (frequency) => {
-    switch (frequency) {
-      case "weekly":
-        return 52;
-      case "quarterly":
-        return 4;
-      case "yearly":
-        return 1;
-      case "monthly":
-      default:
-        return 12;
-    }
-  };
-
-  const calculateSipReturns = () => {
-    const amount = parseFloat(sipData.amount);
-    const years = parseFloat(sipData.years);
-    const expectedReturn = parseFloat(sipData.expectedReturn);
-    const inflationRate =
-      sipData.inflationMode === "custom"
-        ? parseFloat(sipData.inflationRate || 0)
-        : 0;
-
-    if (
-      !Number.isFinite(amount) ||
-      !Number.isFinite(years) ||
-      !Number.isFinite(expectedReturn) ||
-      amount <= 0 ||
-      years <= 0 ||
-      expectedReturn < 0
-    ) {
-      setSipResult({
-        error:
-          "Please enter valid values for investment amount, period, and return.",
-      });
-      return;
-    }
-
-    const periodsPerYear = getPeriodsPerYear(sipData.frequency);
-    const totalPeriods = Math.round(years * periodsPerYear);
-    const periodicRate = expectedReturn / 100 / periodsPerYear;
-
-    let futureValue = 0;
-
-    if (periodicRate === 0) {
-      futureValue = amount * totalPeriods;
-    } else {
-      futureValue =
-        amount *
-        (((Math.pow(1 + periodicRate, totalPeriods) - 1) / periodicRate) *
-          (1 + periodicRate));
-    }
-
-    const investedAmount = amount * totalPeriods;
-    const profitEarned = futureValue - investedAmount;
-
-    const realFutureValue =
-      inflationRate > 0
-        ? futureValue / Math.pow(1 + inflationRate / 100, years)
-        : futureValue;
-
-    const projectionDurations = [2, 5, 8, 10, 12, 15, 18, 20, 25, 30]
-      .filter((yr) => yr <= Math.max(30, Math.ceil(years)))
-      .map((yr) => {
-        const periods = yr * periodsPerYear;
-        let projectedFV = 0;
-
-        if (periodicRate === 0) {
-          projectedFV = amount * periods;
-        } else {
-          projectedFV =
-            amount *
-            (((Math.pow(1 + periodicRate, periods) - 1) / periodicRate) *
-              (1 + periodicRate));
-        }
-
-        return {
-          year: yr,
-          invested: amount * periods,
-          futureValue: projectedFV,
-        };
-      });
-
-    setSipResult({
-      error: "",
-      investedAmount,
-      futureValue,
-      profitEarned,
-      realFutureValue,
-      projectionDurations,
-    });
-  };
-
-  const resetSipCalculator = () => {
-    setSipData({
-      amount: "",
-      frequency: "monthly",
-      years: "",
-      expectedReturn: "",
-      inflationMode: "none",
-      inflationRate: "",
-    });
-
-    setSipResult(null);
-  };
-
-  const sipChartBars = useMemo(() => {
-    if (!sipResult || sipResult.error) return [];
-    const total = Math.max(sipResult.futureValue, 1);
-    return [
-      {
-        label: "Invested",
-        value: sipResult.investedAmount,
-        height: `${(sipResult.investedAmount / total) * 100}%`,
-      },
-      {
-        label: "Returns",
-        value: sipResult.profitEarned,
-        height: `${(sipResult.profitEarned / total) * 100}%`,
-      },
-    ];
-  }, [sipResult]);
-
   return (
     <div ref={homeRef} className="epm-home-page">
       <section className="epm-hero-wrap" ref={heroWrapRef} id="home">
@@ -1057,7 +867,7 @@ const Home = () => {
               muted
               playsInline
               preload="metadata"
-              poster="/poster.webp"
+              poster="/videos/hero-poster.jpg"
               onEnded={handleVideoEnd}
               onError={handleVideoEnd}
             />
@@ -1080,13 +890,6 @@ const Home = () => {
                   <span className="epm-hero-text-line epm-line-excellence">
                     EXCELLENCE
                   </span>
-
-                  {showTyped && (
-                    <div className="epm-hero-typed-row">
-                      <span className="epm-hero-typed-text">{typedText}</span>
-                      <span className="epm-typed-caret" />
-                    </div>
-                  )}
 
                   <div
                     className={`epm-hero-inline-social ${videoEnded ? "show" : ""}`}
@@ -1131,8 +934,8 @@ const Home = () => {
         </div>
       </section>
 
-     
-     
+
+
       <div className="epm-hero-spacer"></div>
 
       <div className="epm-overlap-stack">
@@ -1142,7 +945,7 @@ const Home = () => {
               <div className="epm-stats-grid">
                 <div className="epm-stat-box" ref={ref4}>
                   <h2>{aum}</h2>
-                  <p>AUM</p>
+                  <p>Total Asset Under Management</p>
                 </div>
 
                 <div className="epm-stat-line"></div>
@@ -1171,30 +974,35 @@ const Home = () => {
 
         <section className="solutions-section epm-reveal-section epm-animate epm-overlap-panel">
           <div className="solutions-container">
-            <div className="solutions-left">
-              <h2>Wealth Is More Than Just Money...</h2>
-              <Link to="/contact" className="solutions-link">
-                START THE CONVERSATION <span>→</span>
-              </Link>
-            </div>
+            <div className="solutions-right">
+              <h2>Wealth &amp; More Than Just Money</h2>
+              <div className="solutions-typed-row">
+                <span className="solutions-typed-text">{typedText}</span>
+                <span className="epm-typed-caret" />
+              </div>
+                          </div>
 
             <div className="solutions-right">
-              <p>
-                At EPM Wealth Management, wealth advisory goes far beyond simply
-                building a portfolio. Working closely with individuals and
-                corporates over the years, we understand that true wealth
-                management requires a holistic, personalized approach aligned
-                with each client’s unique goals.
-              </p>
+  <p>
+    It all begin with you. At EPM we believe your wealth
+    goes beyond money. We prioritize you, your loved ones, and your
+    business, ensuring they remain at the heart of our every action.
+    Our personalized approach helps you achieve your goals today and
+    in the future.
+  </p>
 
-              <p>
-                By combining deep financial insight with modern technology, we
-                design strategies tailored to your evolving financial needs.
-                Your dedicated advisor—supported by an experienced team—guides
-                you through every important decision, ensuring clarity,
-                confidence, and long-term financial growth.
-              </p>
-            </div>
+  <p>
+    By combining deep financial insight with modern technology, we
+    design strategies tailored to your evolving financial needs.
+    Your dedicated manager—supported by an experienced team—guides
+    you through every important decision, ensuring clarity,
+    confidence, and long-term financial stability.
+  </p>
+
+  <Link to="/contact" className="solutions-link">
+    START THE CONVERSATION <span>→</span>
+  </Link>
+</div>
           </div>
         </section>
 
@@ -1204,17 +1012,11 @@ const Home = () => {
               <div className="decision-heading-wrap">
                 {/* <span className="decision-mini-label">SERVICES</span> */}
                 <h2 className="decision-heading">
-                  Financial Decisions Made Simpler For Every Indian
+                  Financial Decisions Made Simpler
                 </h2>
               </div>
 
-              <div className="decision-intro">
-                <p>
-                  Our financial services are tailored to your unique wealth
-                  creation journey. Explore bespoke solutions designed for your
-                  specific goals.
-                </p>
-              </div>
+              <div className="decision-intro"></div>
             </div>
 
             <div className="decision-grid">
@@ -1229,11 +1031,13 @@ const Home = () => {
                   <div className="decision-card-blur-panel"></div>
 
                   <div className="decision-card-content">
-                    <span className="decision-card-meta">{item.meta}</span>
+                    {item.meta && (
+                      <span className="decision-card-meta">{item.meta}</span>
+                    )}
                     <h3>{item.title}</h3>
-                    <p>{item.description}</p>
+                    {item.description && <p>{item.description}</p>}
 
-                  
+
                   </div>
                 </div>
               ))}
@@ -1242,72 +1046,67 @@ const Home = () => {
         </section>
 
         <section className="vault-section epm-reveal-section epm-animate epm-overlap-panel">
-          <div className="vault-container">
-            <div className="vault-top-grid">
-              <div className="vault-left-panel">
-                <span className="vault-label">VAULT DESIGN</span>
+          <div className="vault-top-grid">
+            <div className="vault-left-panel">
+              
+              <h2 className="vault-heading">
+                Your Access To
+                <br />
+                Rich Insights
+              </h2>
 
-                <h2 className="vault-heading">
-                  Your access to
-                  <br />
-                  rich insights
-                </h2>
+              <p className="vault-description">
+                From experienced partners at the forefront of today&apos;s
+                financial trends and beyond.
+              </p>
 
-                <p className="vault-description">
-                  From experienced partners at the forefront of today&apos;s
-                  financial trends and beyond. Trusted by the top 0.01% of the
-                  country.
-                </p>
-
-                <a href="#contact" className="vault-link">
-                  Explore Vault <span>→</span>
-                </a>
-              </div>
-
-              <div className="vault-featured-card">
-                <img
-                  src={featuredArticle.image}
-                  alt={featuredArticle.title}
-                  className="vault-featured-image"
-                  width="1200"
-                  height="700"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <div className="vault-featured-overlay"></div>
-              </div>
             </div>
 
-            <div className="vault-bottom-grid">
-              {bottomArticles.map((item, index) => (
-                <article
-                  className={`vault-article-card ${
-                    index === 0 ? "first-vault-card" : ""
+            <div
+              className="vault-featured-card"
+              onClick={() => setSelectedArticle(featuredArticle)}
+              style={{ cursor: "pointer" }}
+            >
+              <img
+                src={orbitImg}
+                alt="Financial Stress Workplace"
+                className="vault-featured-image"
+                width="1200"
+                height="700"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+
+          <div className="vault-bottom-grid">
+            {bottomArticles.map((item, index) => (
+              <article
+                className={`vault-article-card ${index === 0 ? "first-vault-card" : ""
                   }`}
-                  key={item.id}
-                >
-                  <div className="vault-article-image-wrap">
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      width="1200"
-                      height="700"
-                      loading="lazy"
-                      decoding="async"
-                      className={`vault-article-image ${
-                        index === 0 ? "fit-image" : ""
+                key={item.id}
+                onClick={() => setSelectedArticle(item)}
+              >
+                <div className="vault-article-image-wrap">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    width="1200"
+                    height="700"
+                    loading="lazy"
+                    decoding="async"
+                    className={`vault-article-image ${index === 0 ? "fit-image" : ""
                       }`}
-                    />
-                  </div>
+                  />
+                </div>
 
-                  <div className="vault-article-content">
-                    <span className="vault-article-type">{item.type}</span>
-                    <h4>{item.title}</h4>
-                    <p>{item.date}</p>
-                  </div>
-                </article>
-              ))}
-            </div>
+                <div className="vault-article-content">
+                  <span className="vault-article-type">{item.type}</span>
+                  <h4>{item.title}</h4>
+                  <p>{item.date}</p>
+                </div>
+              </article>
+            ))}
           </div>
         </section>
 
@@ -1339,9 +1138,8 @@ const Home = () => {
                 {awardsData.map((item) => (
                   <button
                     key={item.year}
-                    className={`awards-year-btn ${
-                      activeYear === item.year ? "active" : ""
-                    }`}
+                    className={`awards-year-btn ${activeYear === item.year ? "active" : ""
+                      }`}
                     onClick={() => setActiveYear(item.year)}
                   >
                     {item.year}
@@ -1359,20 +1157,29 @@ const Home = () => {
 
             <div className="awards-gallery-marquee">
               <div className="awards-horizontal-scroll-track">
-                {duplicatedGalleryImages.map((img, index) => (
+                {/* {duplicatedGalleryImages.map((img, index) => (
                   <div className="awards-gallery-card" key={index}>
                     <img
                       src={img}
-                      alt={`Award gallery ${index + 1}`}
+                     alt="EPM Award"
                       width="1200"
                       height="700"
                       loading="lazy"
                       decoding="async"
                     />
-                    <div className="awards-gallery-card-overlay">
-                      <span>EPM WEALTH</span>
-                      <p>Recognition & Premium Milestones</p>
-                    </div>
+
+                  </div>
+                ))} */}
+                {duplicatedGalleryImages.map((img, index) => (
+                  <div className="awards-gallery-card" key={index}>
+                    <img
+                      src={img}
+                      alt="EPM Award"
+                      width="1200"
+                      height="700"
+                      loading="lazy"
+                      decoding="async"
+                    />
                   </div>
                 ))}
               </div>
@@ -1490,9 +1297,8 @@ const Home = () => {
                     {testimonialsData.map((item, index) => (
                       <button
                         key={item.id}
-                        className={`testimonials-dot ${
-                          activeTestimonial === index ? "active" : ""
-                        }`}
+                        className={`testimonials-dot ${activeTestimonial === index ? "active" : ""
+                          }`}
                         onClick={() => handleDotClick(index)}
                         aria-label={`Show testimonial ${index + 1}`}
                       ></button>
@@ -1505,6 +1311,35 @@ const Home = () => {
         </section>
 
       </div>
+
+      {/* Article Detail Modal */}
+      {selectedArticle && (
+        <div className="epm-article-modal-overlay" onClick={() => setSelectedArticle(null)}>
+          <div className="epm-article-modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="epm-article-modal-close" onClick={() => setSelectedArticle(null)} aria-label="Close modal">
+              &times;
+            </button>
+            <div className="epm-article-modal-header">
+              <span className="epm-article-modal-type">{selectedArticle.type || "ARTICLE"}</span>
+              {selectedArticle.date && <span className="epm-article-modal-date">{selectedArticle.date}</span>}
+              {selectedArticle.meta && <span className="epm-article-modal-meta">{selectedArticle.meta}</span>}
+            </div>
+            <h2 className="epm-article-modal-title">{selectedArticle.title}</h2>
+            {selectedArticle.image && (
+              <div className="epm-article-modal-image-wrap">
+                <img src={selectedArticle.image} alt={selectedArticle.title} />
+              </div>
+            )}
+            <div className="epm-article-modal-body">
+              {selectedArticle.content ? (
+                selectedArticle.content.map((para, i) => <p key={i}>{para}</p>)
+              ) : (
+                <p>{selectedArticle.desc}</p>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

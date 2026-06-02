@@ -1,186 +1,206 @@
 import React from "react";
 import "./Footer.css";
+
 import {
   FaInstagram,
   FaYoutube,
   FaLinkedinIn,
   FaFacebookF,
   FaWhatsapp,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaMapMarkerAlt,
 } from "react-icons/fa";
+import { BrowserRouter } from "react-router-dom";
 
 const Footer = () => {
   return (
     <>
-      <footer className="luxury-footer epm-overlap-panel">
-        <div className="luxury-footer-top-line"></div>
+      <footer className="glass-footer">
 
-        <div className="luxury-footer-container">
-          <div className="luxury-footer-grid">
+        <div className="glass-footer-container">
 
-            {/* Brand Column */}
-            <div className="luxury-footer-brand">
-              <div className="luxury-footer-logo-wrap">
-                <img
-                  src="https://epmwealth.com/wp-content/uploads/2023/06/logo-emp.png"
-                  alt="EPM Wealth"
-                  className="luxury-footer-logo"
-                />
-              </div>
+          {/* Brand Section */}
+          <div className="glass-footer-brand">
 
-              <h2 className="luxury-footer-brand-title">
-                <span>EPM</span> Wealth
-              </h2>
+            <img
+              src="https://epmwealth.com/wp-content/uploads/2023/06/logo-emp.png"
+              alt="Excelsior Pinnacle Minds"
+              className="glass-footer-logo"
+              width="120"
+              height="50"
+            />
 
-              <p className="luxury-footer-tagline">
-                INSIGHT WITH INTEGRITY
-              </p>
+            <h2 className="glass-footer-title">
+              <span>EXCELSIOR</span>
+              <br />
+              PINNACLE MINDS PVT. LTD.
+            </h2>
 
-              <p className="luxury-footer-description">
-                IRDAI, AMFI, BSE, NSE &amp; MCX registered wealth management
-                firm.
-              </p>
 
-              <div className="luxury-footer-badges">
-                <span>AMFI 100255</span>
-                <span>BSE 1197501</span>
-                <span>IRDAI</span>
-              </div>
 
-              <div className="luxury-footer-socials">
-                <a
-                  href="https://www.instagram.com/epm_wealth/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FaInstagram />
-                </a>
+            <p className="glass-footer-description">
+              IRDAI Reg. No. : ____ | AMFI ARN : ____ | NSE Registration No. : ____ | BSE Registration No. : ____ | MCX Registration No. : ____
+            </p>
 
-                <a
-                  href="https://www.youtube.com/@epmwealth101"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FaYoutube />
-                </a>
-
-                <a
-                  href="https://www.linkedin.com/company/epm-wealth/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FaLinkedinIn />
-                </a>
-
-                <a
-                  href="https://www.facebook.com/epmwealthadvisor"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FaFacebookF />
-                </a>
-
-                <a
-                  href="https://wa.me/919899939333"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FaWhatsapp />
-                </a>
-              </div>
+            <div className="glass-footer-badges">
+              <span>AMFI 100255</span>
+              <span>BSE 1197501</span>
+              <span>IRDAI</span>
+              <span>MCX</span>
             </div>
 
-            {/* Connect With Us */}
-            <div className="luxury-footer-column">
-              <h3>CONNECT WITH US</h3>
-
+            <div className="glass-footer-socials">
               <a
                 href="https://www.instagram.com/epm_wealth/"
                 target="_blank"
                 rel="noreferrer"
+                aria-label="Instagram"
               >
-                Instagram
+                <FaInstagram />
               </a>
 
               <a
                 href="https://www.youtube.com/@epmwealth101"
                 target="_blank"
                 rel="noreferrer"
+                aria-label="YouTube"
               >
-                YouTube
+                <FaYoutube />
               </a>
 
               <a
                 href="https://www.linkedin.com/company/epm-wealth/"
                 target="_blank"
                 rel="noreferrer"
+                aria-label="LinkedIn"
               >
-                LinkedIn
+                <FaLinkedinIn />
               </a>
 
               <a
                 href="https://www.facebook.com/epmwealthadvisor"
                 target="_blank"
                 rel="noreferrer"
+                aria-label="Facebook"
               >
-                Facebook
+                <FaFacebookF />
+              </a>
+            </div>
+          </div>
+
+          
+          {/* Connect */}
+          <div className="glass-footer-column">
+            <h3>Connect</h3>
+
+            <a
+              href="https://www.instagram.com/epm_wealth/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Instagram <br />
+            </a>
+
+            <a
+              href="https://www.youtube.com/@epmwealth101"
+              target="_blank"
+              rel="noreferrer"
+            >
+              YouTube <br />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/company/epm-wealth/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn <br />
+            </a>
+
+            <a
+              href="https://www.facebook.com/epmwealthadvisor"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Facebook
+            </a>
+          </div>
+
+          {/* Contact */}
+          <div className="glass-footer-column glass-contact">
+
+            <h3>Office Address</h3>
+
+            <div className="glass-contact-item">
+              <FaMapMarkerAlt />
+              <p>
+                814, 8th Floor, Wave Silver Tower,
+                <br />
+                Sector-18, Noida,
+                <br />
+                Uttar Pradesh 201301
+              </p>
+            </div>
+
+            <div className="glass-contact-item">
+              <FaPhoneAlt />
+              <a href="tel:+911206662012">
+                +91 120 666 2012
               </a>
             </div>
 
-            {/* Office Address */}
-            <div className="luxury-footer-column">
-              <h3>OFFICE ADDRESS</h3>
-
-              <p>
-                612-A, 6th Floor, Wave Silver Tower,
-                Sector-18, Noida, Uttar Pradesh 201301
-              </p>
-
-              <a href="tel:+9101204264717">
-                +91 0120 426 4717
-              </a>
-
+            <div className="glass-contact-item">
+              <FaPhoneAlt />
               <a href="tel:+919899939333">
                 +91 98999 39333
               </a>
-
+            </div>
+            <h4>Email :</h4>
+            <div className="glass-contact-item">
+              <FaEnvelope />
               <a href="mailto:info@epmwealth.com">
                 info@epmwealth.com
               </a>
             </div>
 
+            <div className="glass-contact-item">
+              <FaEnvelope />
+              <a href="mailto:bdm@epmwealth.com">
+                bdm@epmwealth.com
+              </a>
+            </div>
           </div>
+
         </div>
 
-        <div className="epm-footer-bottom-line"></div>
+        <div className="glass-footer-divider"></div>
 
-        <div className="epm-footer-bottom">
-          <p>
-            © 2026 EPM Wealth. All Rights Reserved.
-          </p>
+       <div className="glass-footer-bottom">
+  <p>
+    © 2026 Excelsior Pinnacle Minds Pvt. Ltd. All Rights Reserved.
+  </p>
 
-          <div className="epm-footer-links">
-            <a href="/privacy-policy">
-              Privacy Policy
-            </a>
+  <div className="glass-footer-legal">
+    <a href="/privacy-policy">Privacy Policy</a>
+    <span className="glass-footer-dot">|</span>
+    <a href="/disclaimer">Disclaimer</a>
+    <span className="glass-footer-dot">|</span>
+    <a href="/regulatory-information">Regulatory Information</a>
+  </div>
+</div>
 
-            <a href="/disclaimer">
-              Disclaimer
-            </a>
-
-            <a href="/regulatory-information">
-              Regulatory Information
-            </a>
-          </div>
-        </div>
       </footer>
+
+      {/* WhatsApp Floating Button */}
 
       <a
         href="https://wa.me/919899939333"
         target="_blank"
         rel="noopener noreferrer"
-        className="epm-whatsapp-float"
+        className="glass-whatsapp"
+        aria-label="WhatsApp"
       >
-        <span className="wa-shine"></span>
         <FaWhatsapp />
       </a>
     </>

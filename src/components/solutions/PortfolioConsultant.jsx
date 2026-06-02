@@ -134,12 +134,6 @@ const PortfolioConsultant = () => {
   const [cardStyle, setCardStyle] = useState({});
   const [visibleBars, setVisibleBars] = useState(progressData.map(() => 0));
 
-  const [activeProcessCard, setActiveProcessCard] = useState(null);
-
-  const toggleProcessCard = (index) => {
-    setActiveProcessCard(activeProcessCard === index ? null : index);
-  };
-
   const [openCard, setOpenCard] = useState(null);
 
   const handleToggle = (index) => {

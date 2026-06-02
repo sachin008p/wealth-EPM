@@ -107,7 +107,7 @@ const Navbar = () => {
                 : ""
             }
           >
-            Entrepreneurial Initiative
+            The EPM Alliance
           </Link>
         </div>
 

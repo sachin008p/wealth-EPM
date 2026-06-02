@@ -1,4 +1,4 @@
-import React, { lazy, useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./About.css";
 import {
   FaInstagram,
@@ -76,8 +76,6 @@ const About = () => {
   const handleFlip = (id) => {
     setActiveCard((prev) => (prev === id ? null : id));
   };
-
-  const About = lazy(() => import("./About"));
 
   return (
     <>
@@ -212,7 +210,6 @@ const About = () => {
                     height="700"
                     loading="lazy"
                     decoding="async"
-                    alt=""
                     alt="EPM Wealth origin story"
                     className="origin-story-image"
                   />
@@ -256,7 +253,6 @@ const About = () => {
                         height="700"
                         loading="lazy"
                         decoding="async"
-                        alt=""
                       />
                       <div className="epm-team-front-overlay"></div>
 

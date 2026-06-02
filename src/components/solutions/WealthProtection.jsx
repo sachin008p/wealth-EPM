@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   FaInstagram,
   FaYoutube,
@@ -94,7 +94,6 @@ const protectionProducts = [
 
 const WealthProtection = () => {
   const [count, setCount] = useState(0);
-  const reasonsRef = useRef(null);
 
   useEffect(() => {
     let start = 0;
