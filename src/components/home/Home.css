@@ -1892,28 +1892,37 @@ body {
 .solutions-container {
   width: 100%;
   max-width: 1500px;
+  line-height: 1.5;
   margin: 0 auto;
+  color: #8a7527;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  gap: 90px;
   align-items: start;
 }
+
+
 
 .solutions-left {
   padding-left: 120px;
   margin-top: 10px;
 }
 
+.solutions-left p {
+  font-size: 22px;
+}
+
 .solutions-left h2 {
-  margin: 50px;
+  margin: 0 0 40px 0;   
   font-family: "Cormorant Garamond", serif;
   font-size: 52px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.25;
-  letter-spacing:0.5px;
+  letter-spacing: 0.5px;
   color: #1f2940;
-  margin-bottom: 40px;
 }
+
+
 
 .solutions-label {
   /* removed: label unused after homepage update */
@@ -1923,29 +1932,32 @@ body {
 .solutions-right p {
   font-family: "Manrope", "Inter", sans-serif;
   font-size: 16px;
-  line-height: 1.9;
+  line-height: 1.4;
+  align-items: center;
+   justify-content: flex-start; /* 👈 left align force */
+   text-align: left;
   font-weight: 500;
-  color: #6d543d;
+  color: #8d8d1f;
   letter-spacing: 0.2px;
-  max-width: 620px;
+  max-width: 620px
+ 
 }
+
 
 .solutions-link {
   display: inline-flex;
-  align-items: center;
+  align-items: center; 
+  justify-content: flex-start; /* 👈 left align force */
   margin-left: 0;
   gap: 10px;
   font-family: "Manrope", sans-serif;
   font-size: 14px;
   letter-spacing: 2px;
   font-weight: 800;
-  color: #a15b19;
+  color: #915c2e;
   text-decoration: none;
-  transition:
-    transform 0.3s ease,
-    color 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
-
 .solutions-link:hover {
   transform: translateX(6px);
   color: #7f5733;
@@ -1969,7 +1981,7 @@ body {
 }
 
 .decision-container {
-  width: 100%;
+    width: 100%;
   max-width: 1350px;
   margin: 0 auto;
 }
@@ -1984,7 +1996,7 @@ body {
 
 .decision-heading-wrap {
   text-align: left;
-}
+  }
 
 .decision-mini-label {
   display: inline-block;
@@ -2016,16 +2028,17 @@ body {
 .decision-intro p {
   margin-top: 60px;
   max-width: 620px;
-  font-size: 0.95rem;
+    font-size: 0.95rem;
   line-height: 1.8;
   color: #6d6356;
   font-weight: 500;
+  text-align: center;
   text-align: left;
 }
 
 .decision-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1px;
   background: rgba(255, 255, 255, 0.36);
   border: 1px solid rgba(255, 255, 255, 0.35);
@@ -2034,7 +2047,7 @@ body {
 .decision-card {
   position: relative;
   min-height: 340px;
-  overflow: hidden;
+    overflow: hidden;
   isolation: isolate;
   cursor: pointer;
   background-size: 55%;
@@ -2092,13 +2105,17 @@ body {
 
 .decision-card-content {
   position: absolute;
-  top: 50%;
-  left: 20px;
+  top: 70%;
+  left: 0;
+  width: 58%; /* blur panel jitni width */
   transform: translateY(-50%);
+
+  padding-left: 50px;
+  box-sizing: border-box;
+
   z-index: 3;
   color: #fff;
   text-align: left;
-  width: 220px; /* width kam rakhne se text wrap hoga */
 }
 
 .decision-card-content h3 {
@@ -2267,7 +2284,7 @@ body {
 
 .vault-left-panel {
   border-radius: 30px;
-  padding: 34px 30px;
+    padding: 34px 30px;
   background: linear-gradient(180deg, #fffdf9 0%, #f9f4ed 100%);
   border: 1px solid rgba(159, 109, 61, 0.12);
   box-shadow: 0 18px 40px rgba(22, 30, 45, 0.06);
@@ -5215,6 +5232,19 @@ video {
 
   /* ── Solutions ── */
 
+  .solutions-left h2 {
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.solutions-typed-row {
+  margin-top: 0;
+}
+
+.solutions-typed-text {
+  display: block;
+}
+
   .solutions-container {
     display: flex !important;
     flex-direction: column !important;
@@ -7949,14 +7979,19 @@ POSTER BOX ───────────────────────
 /* =========================================================
    SOLUTIONS SECTION TYPING EFFECTS & CURSORS
    ========================================================= */
+.solutions-left {
+  text-align: left;
+}
+
 .solutions-typed-row {
   display: flex;
+  justify-content: flex-start;
   align-items: center;
-  gap: 6px;
-  margin-left: 50px;
-  margin-top: 10px;
-  margin-bottom: 25px;
-  min-height: 2.2rem;
+  text-align: left;
+}
+
+.solutions-typed-text {
+  text-align: left;
 }
 
 .solutions-typed-text {

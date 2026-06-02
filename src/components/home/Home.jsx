@@ -974,15 +974,16 @@ const Home = () => {
 
         <section className="solutions-section epm-reveal-section epm-animate epm-overlap-panel">
           <div className="solutions-container">
-            <div className="solutions-right">
-              <h2>Wealth &amp; More Than Just Money</h2>
-              <div className="solutions-typed-row">
-                <span className="solutions-typed-text">{typedText}</span>
-                <span className="epm-typed-caret" />
-              </div>
-                          </div>
+           <div className="solutions-left">
+  <h2>Wealth & More Than Just Money</h2>
 
-            <div className="solutions-right">
+  <div className="solutions-typed-row">
+    <span className="solutions-typed-text">{typedText}</span>
+    <span className="epm-typed-caret" />
+  </div>
+</div>
+
+   <div className="solutions-left">
   <p>
     It all begin with you. At EPM we believe your wealth
     goes beyond money. We prioritize you, your loved ones, and your
