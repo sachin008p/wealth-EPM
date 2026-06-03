@@ -75,7 +75,12 @@ const features = [
   {
     id: 3,
     bgImage: transperenImg,
-    title: "Transparent & Client Centric",
+   title: (
+    <>
+      Transparent &  <br />
+      Client Centric
+    </>
+  ),
     description: "",
     meta: "",
   },
@@ -1197,25 +1202,25 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="core-values-grid">
-              {coreValuesData.map((item, index) => (
-                <div
-                  className={`core-value-card core-value-card-${index + 1}`}
-                  key={item.id}
-                >
-                  <div className="core-value-image-wrap">
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      width="1200"
-                      height="700"
-                      loading="lazy"
-                      decoding="async"
-                      className="core-value-image"
-                    />
-                    <div className="core-value-image-overlay"></div>
-                    <span className="core-value-letter">{item.letter}</span>
-                  </div>
+           <div className="core-values-grid">
+  {coreValuesData.map((item, index) => (
+    <div
+      className={`core-value-card core-value-card-${index + 1}`}
+      key={item.id}
+    >
+     <div className="core-value-image-wrap">
+  <img
+    src={item.image}
+    alt={item.title}
+    width="1200"
+    height="700"
+    loading="lazy"
+    decoding="async"
+    className="core-value-image"
+  />
+  <div className="core-value-image-overlay"></div>
+  <span className="core-value-letter">{item.letter}</span>
+</div>
 
                   <div className="core-value-content">
                     <span className="core-value-title">{item.title}</span>
