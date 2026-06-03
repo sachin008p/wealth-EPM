@@ -52,35 +52,35 @@ const features = [
     id: 1,
     bgImage: featuresImg,
     title: (
-    <>
-      Customized  <br />
-     For You
-    </>
-  ),
+      <>
+        Customized  <br />
+        For You
+      </>
+    ),
     description: "",
     meta: "",
   },
   {
-  id: 2,
-  bgImage: technicalImg,
-  title: (
-    <>
-      Technically <br />
-      Driven
-    </>
-  ),
-  description: "",
-  meta: "",
-},
+    id: 2,
+    bgImage: technicalImg,
+    title: (
+      <>
+        Technically <br />
+        Driven
+      </>
+    ),
+    description: "",
+    meta: "",
+  },
   {
     id: 3,
     bgImage: transperenImg,
-   title: (
-    <>
-      Transparent &  <br />
-      Client Centric
-    </>
-  ),
+    title: (
+      <>
+        Transparent &  <br />
+        Client Centric
+      </>
+    ),
     description: "",
     meta: "",
   },
@@ -979,36 +979,36 @@ const Home = () => {
 
         <section className="solutions-section epm-reveal-section epm-animate epm-overlap-panel">
           <div className="solutions-container">
-           <div className="solutions-left">
-  <h2>Wealth & More Than Just Money</h2>
+            <div className="solutions-left">
+              <h2>Wealth & More Than Just Money</h2>
 
-  <div className="solutions-typed-row">
-    <span className="solutions-typed-text">{typedText}</span>
-    <span className="epm-typed-caret" />
-  </div>
-</div>
+              <div className="solutions-typed-row">
+                <span className="solutions-typed-text">{typedText}</span>
+                <span className="epm-typed-caret" />
+              </div>
+            </div>
 
-   <div className="solutions-left">
-  <p>
-    It all begin with you. At EPM we believe your wealth
-    goes beyond money. We prioritize you, your loved ones, and your
-    business, ensuring they remain at the heart of our every action.
-    Our personalized approach helps you achieve your goals today and
-    in the future.
-  </p>
+            <div className="solutions-left">
+              <p>
+                It all begin with you. At EPM we believe your wealth
+                goes beyond money. We prioritize you, your loved ones, and your
+                business, ensuring they remain at the heart of our every action.
+                Our personalized approach helps you achieve your goals today and
+                in the future.
+              </p>
 
-  <p>
-    By combining deep financial insight with modern technology, we
-    design strategies tailored to your evolving financial needs.
-    Your dedicated manager—supported by an experienced team—guides
-    you through every important decision, ensuring clarity,
-    confidence, and long-term financial stability.
-  </p>
+              <p>
+                By combining deep financial insight with modern technology, we
+                design strategies tailored to your evolving financial needs.
+                Your dedicated manager—supported by an experienced team—guides
+                you through every important decision, ensuring clarity,
+                confidence, and long-term financial stability.
+              </p>
 
-  <Link to="/contact" className="solutions-link">
-    START THE CONVERSATION <span>→</span>
-  </Link>
-</div>
+              <Link to="/contact" className="solutions-link">
+                START THE CONVERSATION <span>→</span>
+              </Link>
+            </div>
           </div>
         </section>
 
@@ -1054,7 +1054,7 @@ const Home = () => {
         <section className="vault-section epm-reveal-section epm-animate epm-overlap-panel">
           <div className="vault-top-grid">
             <div className="vault-left-panel">
-              
+
               <h2 className="vault-heading">
                 Your Access To
                 <br />
@@ -1202,25 +1202,25 @@ const Home = () => {
               </div>
             </div>
 
-           <div className="core-values-grid">
-  {coreValuesData.map((item, index) => (
-    <div
-      className={`core-value-card core-value-card-${index + 1}`}
-      key={item.id}
-    >
-     <div className="core-value-image-wrap">
-  <img
-    src={item.image}
-    alt={item.title}
-    width="1200"
-    height="700"
-    loading="lazy"
-    decoding="async"
-    className="core-value-image"
-  />
-  <div className="core-value-image-overlay"></div>
-  <span className="core-value-letter">{item.letter}</span>
-</div>
+            <div className="core-values-grid">
+              {coreValuesData.map((item, index) => (
+                <div
+                  className={`core-value-card core-value-card-${index + 1}`}
+                  key={item.id}
+                >
+                  <div className="core-value-image-wrap">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      width="1200"
+                      height="700"
+                      loading="lazy"
+                      decoding="async"
+                      className="core-value-image"
+                    />
+                    <div className="core-value-image-overlay"></div>
+                    <span className="core-value-letter">{item.letter}</span>
+                  </div>
 
                   <div className="core-value-content">
                     <span className="core-value-title">{item.title}</span>
