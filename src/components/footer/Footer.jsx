@@ -43,14 +43,7 @@ const Footer = () => {
               IRDAI Reg. No. : ____ | AMFI ARN : ____ | NSE Registration No. : ____ | BSE Registration No. : ____ | MCX Registration No. : ____
             </p>
 
-            <div className="glass-footer-badges">
-              <span>AMFI 100255</span>
-              <span>BSE 1197501</span>
-              <span>IRDAI</span>
-              <span>MCX</span>
-            </div>
-
-            <div className="glass-footer-socials">
+                <div className="glass-footer-socials">
               <a
                 href="https://www.instagram.com/epm_wealth/"
                 target="_blank"

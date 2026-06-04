@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Home.css";
-
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -13,7 +12,6 @@ import {
 
 
 import { Link } from "react-router-dom";
-
 import featuresImg from "../../assets/feature/features.webp";
 import technicalImg from "../../assets/feature/featuress.png";
 import transperenImg from "../../assets/feature/featuress.webp";
@@ -230,8 +228,6 @@ const awardsData = [
       "EPM Wealth crossed ₹150 Crore in AUM, a testament to the compounding trust of clients who have grown with us year after year. And collaborated with different unique hedge funds around the world bringing exclusive opportunities to our clients.",
   },
 ];
-
-// 
 
 const galleryImages = [
   award9,
@@ -1000,7 +996,7 @@ const Home = () => {
               <p>
                 By combining deep financial insight with modern technology, we
                 design strategies tailored to your evolving financial needs.
-                Your dedicated manager—supported by an experienced team—guides
+                Your dedicated manager — supported by an experienced team — guides
                 you through every important decision, ensuring clarity,
                 confidence, and long-term financial stability.
               </p>
@@ -1198,7 +1194,7 @@ const Home = () => {
             <div className="core-values-top">
               <div className="core-values-top-left">
                 <span className="core-values-label">CORE VALUES</span>
-                <h2 className="core-values-heading">We believe in RISK</h2>
+                <h2 className="core-values-heading">We Believe In Risk</h2>
               </div>
             </div>
 
